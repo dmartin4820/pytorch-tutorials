@@ -1,0 +1,6 @@
+time w/o gpu: 117.22888565063477
+time w gpu: 75.34849190711975 
+
+
+num of images: (base) []:~/Projects/pytorch/tutorials/dcgan$ tree data/celeba/ | wc -l
+172631
