@@ -1,11 +1,17 @@
 import os
 from pathlib import Path
+import json
+
+with open('.env.json', 'r') as f:
+    data = json.load(f)
 
 outdir = "data/celeba"
-dirname = "/mnt/c/Users/l/Downloads/CelebA/unzipped/CelebA_Spoof/Data/train"
+dirname = data["path_to_images"]
 outpath = Path(outdir)
 dirpath = Path(dirname)
 
+print(dirname)
+input()
 for dir in dirpath.iterdir():
   outpath_sub = Path(outpath/f'{dir.stem}')
   if not outpath_sub.exists():
